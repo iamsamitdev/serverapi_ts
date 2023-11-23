@@ -1,0 +1,48 @@
+{
+  "name": "serverapitypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "start": "nodemon server.ts",
+    "test": "nodemon test.ts",
+    "build": "tsc",
+    "knex:migrate:make": "knex --knexfile knexfile.ts -x ts migrate:make",
+    "knex:migrate:latest": "knex --knexfile knexfile.ts migrate:latest",
+    "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback",
+    "knex:seed:make": "knex --knexfile knexfile.ts seed:make",
+    "knex:seed:run": "knex --knexfile knexfile.ts seed:run"
+  },
+  "author": "ITGenius",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.8",
+    "multer": "^1.4.3",
+    "mysql2": "^3.5.2",
+    "ts-node": "^10.9.1",
+    "ts-node-register": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.16",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/multer": "^1.4.10",
+    "@types/node": "^20.9.4",
+    "nodemon": "^3.0.1",
+    "request": "^2.81.0",
+    "tape": "^4.7.0",
+    "typescript": "^5.3.2"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT"
+}

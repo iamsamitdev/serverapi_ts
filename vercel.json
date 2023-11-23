@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "name": "webapi_store",
+    "builds": [
+        {
+            "src": "server.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/server.js"
+        }
+    ]
+}
