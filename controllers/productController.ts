@@ -76,7 +76,7 @@ function createProduct(req: Request, res: Response) {
           status_id,
         } = req.body
         const image = req.file ? req.file.filename : null
-        console.log(req.file)
+        // console.log(req.file)
         connection.execute(
           "INSERT INTO products (name, description, barcode, image, stock, price, category_id, user_id, status_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
           [
@@ -134,8 +134,8 @@ function updateProduct(req: Request, res: Response) {
       console.log(`error: ${JSON.stringify(err)}`)
       return res.status(500).json({ message: err })
     } else {
-      console.log(`file: ${JSON.stringify(req.file)}`)
-      console.log(`body: ${JSON.stringify(req.body)}`)
+      // console.log(`file: ${JSON.stringify(req.file)}`)
+      // console.log(`body: ${JSON.stringify(req.body)}`)
       try {
         const {
           name,
